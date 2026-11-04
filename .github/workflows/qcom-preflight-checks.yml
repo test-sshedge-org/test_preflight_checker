@@ -9,7 +9,7 @@ on:
 jobs:
   preflight:
     name: Run QC Preflight Checks
-    uses: qualcomm/qcom-reusable-workflows/.github/workflows/reusable-qcom-preflight-checks-orchestrator.yml@v2
+    uses: test-sshedge-org/test-qcom-reusable-workflows/.github/workflows/reusable-qcom-preflight-checks-orchestrator.yml@cd6a44f6c991f7cbabbd07b4e18389e19b284d98
     with:
       enable-semgrep-scan: true
       enable-dependency-review: true
@@ -17,8 +17,7 @@ jobs:
       enable-copyright-license-check: true
       enable-commit-email-check: true
       enable-commit-msg-check: false
-      enable-armor-checkers: false
-
+      enable-armor-checkers: true
     permissions:
       contents: read
       security-events: write
